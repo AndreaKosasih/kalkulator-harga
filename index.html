@@ -55,13 +55,11 @@
 
     <script>
         function roundPrice(price) {
-            let remainder = price % 500;
-            if (remainder === 0) {
-                return price;
-            } else if (remainder < 250) {
+            let remainder = price % 1000;
+            if (remainder < 500) {
                 return price - remainder;
             } else {
-                return price + (500 - remainder);
+                return price + (1000 - remainder);
             }
         }
 
